@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    {% if messages %}
+        {% for message in messages %} 
+           <p class="txt"> {{ message }} </p>
+        {% endfor %}
+    {% endif %}
+    <div class="welcome-lines"> 
+     Welcome to the Expenses monitoring application ! <br/>
+     <aside>
+     <p class="ind-txt">
+         <b>Keep Track of Money:</b> <br>
+            An expense tracker is a software or application that helps to 
+            keep an accurate record of your money inflow and outflow. 
+            Many people in India live on a fixed income, and they find that towards the end of the month 
+            they don't have sufficient money to meet their needs.
+     </p>
+     <p class="ind-txt">
+        <b>Helps Savings:</b> <br>
+        Money tracker helps us to build up the habbit of savings. This saving habbit is the heartbeat for every Indian citizen.
+Hence you can use this expence tracker to know the process of your saving habbit.
+     </p>
+     <p class="ind-txt">
+        <b>Knows the Expense on Time:</b> <br>
+        With this application you can find your expense which you did earlier in an easy steps.
+And you can use this app to locate when did you perform the income addition and expense process.
+     </p>
+
+     <p class="ind-txt">
+         <b>Backup Availability:</b> <br>
+         Your expense history will be saved in cluod and only you can see those history.
+However, we offer the assurity to protect your data and make sure its available to you whenever you need that.
+     </p>
+    </aside>
+   </div>
+{% endblock %}

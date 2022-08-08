@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+    Please enter the expense or income name to find. <br/><br/>
+    <input type="text" name="txt_txn" id="txt_txn" class = "textbox"  />
+    <button id="btn_find" class="btn" onclick= "js_find()"><i class="fa fa-search"></i></button>
+    <br><br> <button class="btn" onclick = "go_home()" > <i class="fa fa-home"></i> </button>
+    <br/> <br/>
+    <div class= "report" >
+        {% if txn_cmt == "Empty" %}
+            Please enter any name to find !
+        {% elif txn_cmt == "404" %}
+            Sorry! No transaction is matched with that name.
+        {% else %}
+            {% if exps %}
+                {% for exp in exps %}
+                    {{ exp.exp_date }} : Rs.{{ exp.exp_amount }} : {{ exp.exp_name }}
+                {% endfor %}
+            {% endif %}
+            {% if incs %}
+                {% for inc in incs %}
+                    {{ inc.inc_date }} : Rs.{{ inc.inc_amount }} : {{ inc.inc_name }}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    </div>
+    <br/>    
+    
+    
+    
+    <script type="text/javascript" src="{% static "js/find.js" %}" ></script>   
+
+{% endblock %} 

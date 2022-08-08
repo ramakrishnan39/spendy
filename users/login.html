@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form id="frm_login" action="../login/" method="POST">
+        {% csrf_token %}
+    <div class="login-page"> 
+        <div class="lbl-txt">
+           <p>Your username</p>  <input type="text" class="textbox" id="txt_username" name="txt_username" required /> 
+        </div>
+        <div class="lbl-txt">
+            <p>Your password</p> <input type="password" class="textbox" id="pwd_login" name="pwd_login" required />
+        </div>
+    </div>
+        <br/>
+        <input type="submit" value="Login" class="btn"> 
+        <input type="button" value="Back" class="btn" onclick="go_index()">
+    </form>
+
+    <br/>
+    {% if comment %}
+        {{ comment }}
+    {% endif %}
+    <script type="text/javascript" src="{% static "js/login.js" %}" ></script>   
+{% endblock %}

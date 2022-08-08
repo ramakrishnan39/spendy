@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Purse</title>
+    <link rel="icon" href="{% static "imgs/expimg.png" %}" type="image/icon type">
+    <link rel="stylesheet" href="{% static "css/base.css" %}" type="text/css">
+    <link rel="stylesheet" href="{% static "css/allstyle.css" %}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="{% static "js/expense.js" %}"> </script>
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <header class="header">
+        
+        {% if user.is_authenticated %}
+        
+        <div class="div-title"> 
+            <button class="app-title" onclick="go_home()" >Spendy</button>
+        </div>
+        <div class="cont-nav">
+            <div class="ab-nav icon-nav">
+                <a href="javascript:show_menu()" class="ab-txt">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+            <ul id="menu-nav" class="menu-nav">
+                <li> 
+                    <span class="icon-nav-label">Profile</span>
+                    <a href="/profile/" class="icon-nav ab-nav ab-txt "><i class="fa-solid fa-user"></i></a>
+                </li>
+                <li> 
+                    <span class="icon-nav-label">Find Transactions </span>
+                    <a href="/find/" class="icon-nav ab-nav ab-txt"><i class="fa-solid fa-search"></i></a>
+                </li>
+                <li>
+                    <span class="icon-nav-label">Report</span>
+                    <a href="javascript:js_report()" class="icon-nav ab-nav ab-txt"><i class="fa-solid fa-info"></i></a>
+                </li>
+                <li>
+                    <span class="icon-nav-label">Log out</span>
+                    <a href="/users/logout/" class="icon-nav ab-nav ab-txt"><i class="fa-solid fa-sign-out"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        {% else %}
+        <div class="div-title"> <button class="app-title" onclick="go_index()" >Spendy</button></div>
+        <nav id="nav-head-right" class="nav">
+            <ul class="nav-ul">
+                <li> <a href="users/login/" class="btn" > Login </a> </li>  
+                <li> <a href="users/register/" class="btn" > Sign up </a></li>
+            </ul>
+        </nav>    
+        {% endif %}
+    </header>
+    <section class="app-body">
+        {% block content %}
+        {% endblock %}
+    </section>
+    <br/>
+    <footer id="footer" class= "ftr" > 
+        Website created and maintained by " Ramakrishnan P " <br/>
+        Contact by phone : +91 9842378754,  Mail : ramakrishnanp30798@gmail.com
+    </footer>   
+ </body>   
+</html>
+
+
+
+ <!-- <input type="button" class="btn" onclick="go_profile()" value= "{{ userimage.userimage }}" />  -->
+            <!-- <a class="btn" href="/profile/" > <img src=''  /> </a> 
+            
+             <nav id="nav-head-right" class="nav">
+           
+            <input type="button" class="btn" value="Find Transactions" onclick="go_find()" />
+            <input type="button" class="btn" value="Report" onclick="js_report()" />
+            <input type="button" class="btn" onclick="logout()" value="Log out" /> 
+        </nav> -->

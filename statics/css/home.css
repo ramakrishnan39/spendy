@@ -1,0 +1,125 @@
+.ab-cont{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+}
+/*ab - Action Button*/
+.ab{
+  height: 30px;
+  width: 30px;
+  background-color: greenyellow;
+}
+/*icon-ab - Icon of Action Button*/
+.icon-ab{
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: lightgreen;
+}
+.icon-ab i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+.icon-ab-label{
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.options{
+  list-style-type: none;
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 200px;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: scale(0);
+  transform-origin:80% bottom ;
+}
+.options li{
+  display: flex;
+  padding:2px 5px;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+  width: 100%;
+}
+.ab-txt{
+  text-decoration: none;
+}
+.ab:hover + .options, .options:hover{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v130/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+.meter{
+  display: inline-flex;
+  /* align-items: stretch; */
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-content: center;
+}
+.box{
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+}
+.box-com{
+  font-size: 25px;
+  color: white;
+  height: 35px;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.box-inc{
+  background-color: rgb(5, 163, 5);
+
+}
+.box-inc:hover{
+  background-color: green;
+}
+.box-exp{
+  background-color: rgb(255, 116, 65);
+}
+.box-exp:hover{
+  background-color: orangered;
+}
+.box-bal{
+  background-color: rgb(77, 77, 255);
+}
+.box-bal:hover{
+  background-color: blue;
+}
+
+

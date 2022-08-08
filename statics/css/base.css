@@ -1,0 +1,116 @@
+.cont-nav{
+  cursor: pointer;
+}
+.icon-nav{
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: rgb(210, 238, 144);
+}
+
+.icon-nav a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+
+.icon-nav i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+
+.icon-nav-label{
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+/*ab - Action Button*/
+.ab-nav{
+  height: 30px;
+  width: 30px;
+  background-color: greenyellow;
+}
+
+
+.menu-nav{
+  list-style-type: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  /* opacity: 0; */
+  transition: all 0.3s;
+  transform: scale(0);
+  transform-origin:80% top ;
+}
+.menu-nav li{
+  display: flex;
+  padding:2px 5px;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+  width: 100%;
+}
+.ab-txt{
+  text-decoration: none;
+}
+.ab-nav:hover + .menu-nav, .menu-nav:hover{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div-title
+{
+    background-color: rgba(143, 188, 143, 0);
+}
+
+.app-title{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  background-color: inherit;
+  border: 0;
+  border-radius: 20px;
+  padding: 5px;
+  cursor:pointer;
+  animation: welcome 2s ease;
+}
+
+.app-title:hover{
+  font-style: italic;
+}
+.nav{
+  margin: 0;
+  display:inline-block;
+}
+.nav-ul {
+  display: flex;
+  gap: 15px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.collapse-icon{
+  display:none;
+}
+
+@media screen and (max-width:500px)
+{
+  .collapse-icon{
+    display: block;
+    transform: scale(1.5) rotate(90deg);
+    font-weight: bold;
+  }
+}

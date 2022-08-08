@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Body part */
+body
+{
+    background-image: linear-gradient(to right, rgba(241, 171, 238, 0.596), rgba(108, 218, 108, 0.582)) , url('../imgs/inry-expense-management.svg');
+    background-position: top;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    color: black;
+    position: relative;
+    margin: 2vh 2vw;
+    line-height: 23px;
+}
+/* UPPER PART OF THE DOCUMENT */
+.welcome-lines{ 
+    margin-top: 100px;
+}
+
+/* CENTER PART OF THE DOCUMENT */
+.app-body{
+    height: 73vh;
+    width: auto;
+    overflow-y: scroll;
+}
+
+.sec-index{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.el-1{
+    background-color: rgba(216, 163, 216, 0.527);
+}
+
+.el-2{
+    background-color: rgba(216, 163, 216, 0.508);
+}
+.el-3{
+    background-color: rgba(216, 163, 216, 0.532);
+}
+/* BOTTOM PART OF THE DOCUMENT */
+
+.ftr
+{
+    background-color: rgb(160, 216, 133);
+    color: rgb(15, 14, 14);
+
+}
+
+/* COMMON ELEMENTS */
+
+.btn
+{
+    font-size:small;
+    font-weight: bold;
+    color:rgb(8, 71, 245);
+    background-color:rgb(196, 236, 181);
+    border: 2px solid black;
+    border-radius: 20px;
+    
+    padding: 10px;
+    text-decoration-line: none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background-color: rgb(166, 231, 150);
+}
+
+.btnsub{
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+}
+.del
+{
+    color: red;
+    padding: 2px;
+    margin: 7px;
+}
+
+.both{
+    display: flex;
+    justify-content:space-between ;
+    width: 92vw;
+    height: auto;
+    padding: 15px;
+    line-height: 23px;
+    overflow-y: scroll;
+}
+
+.exp-report{
+    background-color: rgba(240, 255, 240, 0.671);
+    width: 48%;
+    
+}
+.inc-report{
+    background-color: rgba(240, 255, 240, 0.623);
+    width: 48%;
+}
+
+.exp-report-header{
+    background-color: hotpink;
+    line-height: 23px;
+}
+
+.inc-report-header{
+    background-color: hotpink;
+    line-height: 23px;
+}
+
+.dtpk
+{
+    font-size: 15px;
+    font-weight: bold;
+    color:darkblue;
+    background-color: bisque;
+    border-radius: 15px;
+    border: 0;
+    height: 27px;
+}
+.dtpk:hover{
+    background-color: rgb(250, 199, 137);
+    box-shadow: 0 10px 20px rgb(126, 123, 123);
+}
+
+.txt
+{
+    font-style: italic;
+    font-weight: 800;
+    color:rgba(28, 61, 247, 0.89);
+}
+
+.txt-home{
+    font-weight: bold;
+}
+.exp-amount{
+    color: darkgreen;
+}
+.textbox
+{
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: darkviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 30px;
+    width: inherit;
+    margin-top: 15px;
+}
+
+@media screen and (max-width:500px){
+    .textbox{
+        width: 80vw;
+    }
+}
+
+.textbox:focus{
+    border-color: deeppink;
+}
+
+
+.label
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 300;
+    font-variant: normal;
+}
+
+.tbl
+{
+    padding:20px; 
+    border: 3px;
+}
+table{
+    width: 100%;
+}
+thead{
+    background-color: cyan;
+    border: none;
+}
+thead:hover{
+    background-color: #adc9e0;
+}
+
+.report
+{
+    height : 57vh ; 
+    width : 94vw;
+    overflow-y: scroll;
+    background-color: rgba(198, 236, 236, 0.644);
+    color:blue;
+    margin-top: 10px;
+}
+
+
+.amount{
+    text-align: center;
+    justify-content: center;
+}
+
+.linkbutton
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-size: small;
+    font-stretch: semi-condensed;
+}
+/* SPECIFIC ELEMENTS */
+.logout
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+.div-menus{
+    margin-top: 20px;
+}
+.comment{
+    background-color:aliceblue; 
+    width:50%; 
+    color: rgb(253, 1, 1) ; 
+    font-style: italic;
+}
+.editprofile{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    width: fit-content;
+    margin-top: 5vh;
+    align-items: center;
+}
+.profile-picture{
+    height: 100px;
+    width: 100px;
+}
+
+.login-page{
+    margin-top: 50px;
+}
+.lbl-txt{
+    padding: 20px;
+}
+/* FOR SIGN UP PAGE*/
+.signup-part{
+    display: flex;
+    flex-direction: column;
+}
+.pswd-rules{
+    padding: 16px;
+    margin-top: 15px;
+}
+.pswd-rules ul{
+    list-style: none;
+}
+.pswd-rules li {
+    margin-left: 40px;
+    color: blueviolet;
+}
+
+
+
+/* ANIMATION DECLARATIONS */
+
+@keyframes welcome{
+    0%{
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
